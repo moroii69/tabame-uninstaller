@@ -19,3 +19,10 @@ if you have concerns about running the executable or prefer a more hands-on appr
 ## note
 
 both the `.exe` and `.py` methods perform the same task: they execute a series of steps to completely uninstall tabame from your system. the `.exe` is essentially a compiled version of the python script, providing an easier, more convenient way to perform the same uninstallation process.
+
+## remove "Open in Wizardly" from context menu
+
+to remove 'Open in Wizardly' from the right-click context menu, you can separately run this command in PowerShell:
+```
+Remove-Item -Path "HKCU:\Software\Classes\Directory\background\shell\tabame" -Force
+```
